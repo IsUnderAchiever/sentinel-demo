@@ -9,6 +9,6 @@ import com.alibaba.csp.sentinel.slots.block.BlockException;
  */
 public class GlobeBlockException {
     public static String blockHandler(BlockException e) {
-        return "您访问的太频繁了，请稍后再试！";
+        return "您访问provider太频繁了，请稍后再试！";
     }
 }

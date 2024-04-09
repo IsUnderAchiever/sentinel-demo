@@ -1,7 +1,5 @@
 package com.example.consumer.controller;
 
-import com.alibaba.csp.sentinel.annotation.SentinelResource;
-import com.example.consumer.fallback.GlobeBlockException;
 import com.example.consumer.feign.ProviderClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +20,7 @@ public class ConsumerController {
     private ProviderClient providerClient;
 
 
-    @SentinelResource(value = "consumerQuery", blockHandlerClass = GlobeBlockException.class, blockHandler = "blockHandler")
+    //@SentinelResource(value = "consumerQuery", blockHandlerClass = GlobeBlockException.class, blockHandler = "blockHandler")
     @GetMapping("/query")
     public String query() {
         String query = providerClient.query();
