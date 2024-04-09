@@ -5,13 +5,9 @@ spring:
         name: provider-service
     cloud:
         nacos:
-            config:
-                server-addr: localhost:8848
             discovery:
                 server-addr: localhost:8848
         sentinel:
             transport:
                 dashboard: localhost:8089
             web-context-unify: false
-    config:
-        import: nacos:nacos-config-example.properties?refresh=true

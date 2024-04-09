@@ -1,13 +1,13 @@
 package com.example.consumer.fallback;
 
 import com.example.consumer.feign.ProviderClient;
-import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.openfeign.FallbackFactory;
 
 /**
  * @author: 不是菜狗爱编程
  * @date: 2024/04/08/21:13
- * @description:
+ * @description: feign.hystrix.FallbackFactory不存在，使用org.springframework.cloud.openfeign.FallbackFactory是否可行
  */
 @Slf4j
 public class ProviderFallbackFactory implements FallbackFactory<ProviderClient> {
